@@ -1,9 +1,8 @@
 /* Body */
 body {
-    font-family: Calibri;
-    background-color: #1A213D;
+    font-family: Arial, sans-serif;
+    background-color: #0c1d3b;
     color: white;
-    margin: 0px;
 }
 
 /* Header */
@@ -16,7 +15,7 @@ header {
 }
 
 header .logo-header img {
-    width: 80px;
+    width: 45px;
 }
 
 nav ul {
@@ -33,57 +32,51 @@ nav ul li a {
 
 /* Banner */
 .banner {
-    background-image: url("asset/banner-ayam.jpg");
+    background-image: url("dummy pic/Hatsune-Miku-crying-2246374-wallhere.com.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
     align-items:center;
-    padding: 120px 20px;
+    padding: 100px 20px;
 }
-.banner-menu{
-    background-repeat: no-repeat;
-    background-position: center;
+
+.banner2 {
     background-size: cover;
     text-align: center;
     align-items:center;
-    padding: 120px 20px;
-}
-@font-face {
-    font-family: Ravie;
-    src: url(asset/Ravie.ttf);
+    padding: 100px 20px;
 }
 
 .banner h1 {
-    font-size: 5vw;
-    font-weight: bold;
-    font-family: Ravie;
-    color: #F9CB19;
-    -webkit-text-stroke: 10px black; 
-    paint-order: stroke fill;
-    /* text-shadow: 2px 2px 5px white; */
+    font-size: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: yellow;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: black; 
+    text-shadow: 2px 2px 5px black;
 }
-.banner-menu h1 {
-    font-size: 5vw;
-    font-weight: bold;
-    font-family: Ravie;
-    color: #F9CB19;
-    -webkit-text-stroke: 10px black; 
-    paint-order: stroke fill;
-    /* text-shadow: 2px 2px 5px white; */
+.banner2 h1 {
+    font-size: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: yellow;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: black; 
+    text-shadow: 2px 2px 5px black;
 }
 
+/* Content */
 .content {
     display: flex;
     align-items:center;
-    padding: 60px;
+    padding: 30px;
     background-color: #203766;
 }
 
 .content2 {
     align-items:center;
     text-align: center;
-    padding: 60px;
+    padding: 30px;
     background-color: #203766;
     justify-content: space-between;
 }
@@ -93,7 +86,7 @@ nav ul li a {
 }
 
 .logo-section img {
-    width: 150px;
+    width: 100px;
     border-radius: 50%;
     border: 2px solid white;
 }
@@ -101,7 +94,6 @@ nav ul li a {
 .text-section {
     max-width: 6000px;
     text-align: justify;
-
 }
 
 .text-section2 {
@@ -109,17 +101,14 @@ nav ul li a {
     text-align: center;
 }
 
-p {
-    font-size:x-large ;
-}
 
+/* Keunggulan */
 .keunggulan {
-    background-color: #1A213D;
+    background-color: #0c1d3b;
     padding: 30px;
 }
 
 .keunggulan h2 {
-    font-size: 3vw;
     margin-bottom: 10px;
     color: yellow;
 }
@@ -127,4 +116,118 @@ p {
 .pesan {
     color: aliceblue;
     align-items: center;
+}
+
+
+/* menu
+
+
+/* Menu Section */
+.menu-section {
+    background-color: #13264d;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu-section h1 {
+    font-family: "Comic Sans MS", cursive;
+    color: yellow;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* Grid Menu */
+.menu-grid {
+    display: grid;
+    /* use auto-fit with a larger min so items don't collapse too narrow,
+       and let the columns grow equally */
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    /* gap scales with viewport but stays within limits */
+    gap: clamp(16px, 3vw, 32px);
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    /* remove fixed heights so items remain flexible */
+    grid-auto-rows: auto;
+}
+
+/* make each menu-item fill the grid cell and keep background cover */
+.menu-item1,
+.menu-item2,
+.menu-item3,
+.menu-item4 {
+    width: 100%;
+    max-width: 250px; /* prevents items from becoming too wide on very large screens */
+    aspect-ratio: 1 / 1; /* keeps items square and responsive */
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+/* smaller devices: stack items vertically (single column) and keep comfortable gap */
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .menu-item1,
+    .menu-item2,
+    .menu-item3,
+    .menu-item4 {
+        max-width: none;
+        width: 100%;
+    }
+}
+.menu-item1 {
+    background-image: url("dummy pic/hertaa.jpg");
+
+}
+
+.menu-item2 {
+    background-image: url("dummy pic/hertaa.jpg");
+}
+
+.menu-item3 {
+    background-image: url("dummy pic/hertaa.jpg");
+}
+
+.menu-item4 {
+    background-image: url("dummy pic/hertaa.jpg");
+}
+.menu-card {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px; /* same limit as the item */
+}
+
+/* caption under each menu item */
+.menu-caption {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    padding: 0 6px;
+    word-break: break-word;
+    padding:15px;
+    border-radius: 10px;
+    
+}
+
+/* ensure the grid items remain flexible */
+.menu-card .menu-item1,
+.menu-card .menu-item2,
+.menu-card .menu-item3,
+.menu-card .menu-item4 {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* small screens — keep caption readable and spacing comfortable */
+@media (max-width: 600px) {
+    .menu-caption { font-size: 15px; margin-top: 12px; }
 }
