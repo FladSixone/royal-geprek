@@ -179,23 +179,22 @@ nav ul li a {
     }
 }
 .menu-item1 {
-    background-image: url("dummy pic/hertaa.jpg");
+    background-image: url("asset/RG-circle.png");
 
 }
 
 .menu-item2 {
-    background-image: url("dummy pic/hertaa.jpg");
+    background-image: url("asset/RG-circle.png");
 }
 
 .menu-item3 {
-    background-image: url("dummy pic/hertaa.jpg");
+    background-image: url("asset/RG-circle.png");
 }
 
 .menu-item4 {
-    background-image: url("dummy pic/hertaa.jpg");
+    background-image: url("asset/RG-circle.png");
 }
 .menu-card {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -213,9 +212,6 @@ nav ul li a {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     padding: 0 6px;
     word-break: break-word;
-    padding:15px;
-    border-radius: 10px;
-    
 }
 
 /* ensure the grid items remain flexible */
