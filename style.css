@@ -33,7 +33,7 @@ nav ul li a {
 
 /* Banner */
 .banner {
-    background-image: url("asset/banner-ayam.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), #0c1d3b), url("asset/banner-ayam.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -55,13 +55,13 @@ nav ul li a {
     text-shadow: 2px 2px 5px black;
 }
 .banner-menu {
-    background-image: url("asset/banner-menu.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), #13264d), url("asset/banner-menu.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
     align-items:center;
-    padding: 120px 20px;
+    padding: 220px 20px;
 }
 .banner-menu h1 {
     font-size: 5vw;
