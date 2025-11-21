@@ -39,7 +39,7 @@ nav ul li a {
     background-size: cover;
     text-align: center;
     align-items:center;
-    padding: 120px 20px;
+    padding: 220px 20px;
 }
 @font-face {
     font-family: Ravie;
@@ -166,8 +166,7 @@ p {
 /* make each menu-item fill the grid cell and keep background cover */
 .menu-item1,
 .menu-item2,
-.menu-item3,
-.menu-item4 {
+.menu-item3 {
     width: 100%;
     max-width: 250px; /* prevents items from becoming too wide on very large screens */
     aspect-ratio: 1 / 1; /* keeps items square and responsive */
@@ -184,28 +183,24 @@ p {
     }
     .menu-item1,
     .menu-item2,
-    .menu-item3,
-    .menu-item4 {
+    .menu-item3 {
         max-width: none;
         width: 100%;
     }
 }
 .menu-item1 {
-    background-image: url("asset/RG-circle.png");
+    background-image: url("asset/ump45.jpeg");
 
 }
 
 .menu-item2 {
-    background-image: url("asset/RG-circle.png");
+    background-image: url("asset/ump45.jpeg");
 }
 
 .menu-item3 {
-    background-image: url("asset/RG-circle.png");
+    background-image: url("asset/ump45.jpeg");
 }
 
-.menu-item4 {
-    background-image: url("asset/RG-circle.png");
-}
 .menu-card {
     
     display: flex;
@@ -233,8 +228,7 @@ p {
 /* ensure the grid items remain flexible */
 .menu-card .menu-item1,
 .menu-card .menu-item2,
-.menu-card .menu-item3,
-.menu-card .menu-item4 {
+.menu-card .menu-item3 {
     width: 100%;
     aspect-ratio: 1 / 1;
 }
@@ -242,4 +236,98 @@ p {
 /* small screens — keep caption readable and spacing comfortable */
 @media (max-width: 600px) {
     .menu-caption { font-size: 15px; margin-top: 12px; }
+}
+.menu-section .menu-grid{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 12px;
+}
+
+/* kartu dropdown dengan dua warna: satu untuk summary (luar) dan satu untuk body (dalam saat terbuka) */
+.menu-card{
+    --summary-bg: #f1e31d;   /* warna di belakang teks (luar) */
+    --inner-bg: #1d3285;     /* warna di dalam dropdown (untuk gambar & teks) */
+    min-width: 280px;
+    max-width: 320px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    overflow: hidden;
+    flex: 0 0 auto;
+    display: grid;
+    background-position: center; 
+    grid-template-rows: auto 1fr;
+}
+
+/* summary: gunakan warna luar di belakang area teks, teks center */
+.menu-card summary{
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 14px;
+    font-weight: 700;
+    background: var(--summary-bg);
+    display: block;
+    position: relative;
+    text-align: center;
+    color: #222;
+    margin: 0; /* remove default summary margin */
+}
+
+/* panah custom */
+.menu-card summary::-webkit-details-marker { display: none; }
+.menu-card summary::after{
+    content: "►";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+    color: #222;
+}
+.menu-card[open] summary::after{
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* body inside details: default transparent, get inner color when open */
+.menu-body{
+    background: transparent;
+    transition: background 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    align-items: stretch;
+}
+
+/* saat dropdown terbuka, body mendapat warna berbeda (dua warna terlihat) */
+.menu-card[open] .menu-body{
+    background: var(--inner-bg);
+}
+
+/* area gambar tetap cover; image background-image didefinisikan di .menu-itemX */
+.menu-image{
+    height: 180px;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* konten teks di dalam dropdown */
+.menu-content{
+    padding: 8px 6px;
+    color: #222;
+}
+.menu-content h4{
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+}
+.menu-content p{
+    margin: 4px 0;
+    font-size: 0.95rem;
 }
