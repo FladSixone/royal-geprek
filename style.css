@@ -203,16 +203,16 @@ footer {
     }
 }
 .menu-item1 {
-    background-image: url("asset/ump45.jpeg");
+    background-image: url("asset/ayamreal.png");
 
 }
 
 .menu-item2 {
-    background-image: url("asset/ump45.jpeg");
+    background-image: url("asset/ayamreal.png");
 }
 
 .menu-item3 {
-    background-image: url("asset/ump45.jpeg");
+    background-image: url("asset/ayamreal.png");
 }
 
 .menu-card {
@@ -264,8 +264,8 @@ footer {
 
 /* kartu dropdown dengan dua warna: satu untuk summary (luar) dan satu untuk body (dalam saat terbuka) */
 .menu-card{
-    --summary-bg: #f1e31d;   /* warna di belakang teks (luar) */
-    --inner-bg: #1d3285;     /* warna di dalam dropdown (untuk gambar & teks) */
+    --summary-bg: #E30016;   /* warna di belakang teks (luar) */
+    --inner-bg: #F9CB19;     /* warna di dalam dropdown (untuk gambar & teks) */
     min-width: 220px;
     max-width: 320px;
     background: #ffffff;
@@ -306,7 +306,7 @@ footer {
     display: block;
     position: relative;
     text-align: center;
-    color: #222;
+    color: #ffffff;
     margin: 0; /* remove default summary margin */
 }
 
@@ -319,7 +319,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     transition: transform 0.2s ease;
-    color: #222;
+    color: #ffffff;
 }
 .menu-card[open] summary::after{
     transform: translateY(-50%) rotate(90deg);
@@ -336,17 +336,17 @@ footer {
     align-items: center; /* changed code: center items (image + content) */
 }
 
-/* saat dropdown terbuka, body mendapat warna berbeda (dua warna terlihat) */
+
 .menu-card[open] .menu-body{
     background: var(--inner-bg);
 }
 
-/* area gambar tetap cover; image background-image didefinisikan di .menu-itemX */
+
 .menu-image{
     height: 180px;
-    width: 100%;            /* changed code: allow responsive width */
-    max-width: 260px;       /* changed code: constrain max width so image terlihat centered */
-    margin: 0 auto;         /* changed code: center horizontally */
+    width: 100%;         
+    max-width: 260px;     
+    margin: 0 auto;         
     background-color: transparent;
     background-size: cover;
     background-position: center;
@@ -357,10 +357,10 @@ footer {
 /* konten teks di dalam dropdown */
 .menu-content{
     padding: 8px 6px;
-    color: #ffffff;
-    width: 100%;            /* changed code: match image width */
-    max-width: 260px;       /* changed code: align with image */
-    text-align: center;     /* changed code: center text under image */
+    color: #000000;
+    width: 100%;           
+    max-width: 260px;       
+    text-align: center;     
 }
 .menu-content h4{
     margin: 0 0 6px 0;
