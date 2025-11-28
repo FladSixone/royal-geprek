@@ -209,11 +209,11 @@ footer {
 }
 
 .menu-item2 {
-    background-image: url("asset/estehC.png");
+    background-image: url("asset/geprekC.png");
 }
 
 .menu-item3 {
-    background-image: url("asset/geprekC.png");
+    background-image: url("asset/estehC.png");
 }
 
 .menu-card {
@@ -362,10 +362,20 @@ footer {
     width: 100%;            /* changed code: match image width */
     max-width: 260px;       /* changed code: align with image */
     text-align: center;     /* changed code: center text under image */
+    align-items: center;
 }
 .menu-content h4{
     margin: 0 0 6px 0;
     font-size: 1.1rem;
+}
+.menu-content table{
+    margin: 0px auto;
+}
+.menu-content td{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 7px ;
 }
 .menu-content p{
     margin: 4px 0;
@@ -378,7 +388,6 @@ li {
 }
 
 ul {
-    padding: 0 50;
     align-items: left;
     text-align: left;
     justify-content: space-between;
