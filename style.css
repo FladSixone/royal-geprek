@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1em 1em;
     background-color: #E30016;
 }
 
@@ -149,14 +149,6 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    border-bottom: 1px solid #333;
 }
 
 .header-left {
@@ -311,3 +303,4 @@ main {
     color: #ffb700;
     cursor: pointer;
 }
+
