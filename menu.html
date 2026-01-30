@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="id">
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -205,6 +205,22 @@
         <footer>
             <p>&copy; 2025 Royal Geprek. All Rights Reserved.</p>
         </footer>
-        </section> 
+        </section>
+    <script>
+        // Make tabs clickable without navigation
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // active class to clicked button
+                this.classList.add('active');
+            });
+        });
+    </script>
     </body>
     </html>
