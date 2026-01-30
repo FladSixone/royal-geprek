@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 1em;
+    padding: 10px 20px;
     background-color: #E30016;
 }
 
@@ -151,6 +151,14 @@ body {
     padding: 0;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    border-bottom: 1px solid #333;
+}
+
 .header-left {
     display: flex;
     align-items: center;
@@ -246,14 +254,21 @@ main {
     gap: 20px;
 }
 
+@media (max-width: 768px) {
+    .rewards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .reward-card {
     background-color: #0c1d3b;
     border-radius: 10px;
     overflow: hidden;
-    padding: 15px;
+    padding: 1.5em;
+    width: 85%;
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: fit-content;
     cursor: pointer;
 }
 
@@ -303,4 +318,3 @@ main {
     color: #ffb700;
     cursor: pointer;
 }
-
