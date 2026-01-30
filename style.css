@@ -1,4 +1,3 @@
-/* Body */
 body {
     font-family: Calibri;
     background-color: #1A213D;
@@ -142,258 +141,173 @@ footer {
     color: white;
     text-align: center;
     padding: 5px 0;
-    margin-top: 15px;
 }
 
-/* menu
-
-
-/* Menu Section */
-.menu-section {
-    background-color: #13264d;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.menu-section h1 {
-    font-family: "Comic Sans MS", cursive;
-    color: yellow;
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
-/* Grid Menu */
-.menu-grid {
-    display: grid;
-    /* use auto-fit with a larger min so items don't collapse too narrow,
-       and let the columns grow equally */
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
-    /* gap scales with viewport but stays within limits */
-    gap: clamp(16px, 3vw, 32px);
-    justify-items: center;
-    align-items: center;
-    position: relative;
-    /* remove fixed heights so items remain flexible */
-    grid-auto-rows: auto;
-}
-
-/* make each menu-item fill the grid cell and keep background cover */
-.menu-item1,
-.menu-item2,
-.menu-item3 {
-    width: 100%;
-    max-width: 250px; /* prevents items from becoming too wide on very large screens */
-    aspect-ratio: 1 / 1; /* keeps items square and responsive */
-    background-position: center;
-    background-size: cover;
-    border-radius: 12px;
-}
-
-/* smaller devices: stack items vertically (single column) and keep comfortable gap */
-@media (max-width: 600px) {
-    .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .menu-item1,
-    .menu-item2,
-    .menu-item3 {
-        max-width: none;
-
-        width: 100%;
-    }
-}
-.menu-item1 {
-    background-image: url("asset/geprektehC.png");
-
-}
-
-.menu-item2 {
-    background-image: url("asset/geprekC.png");
-}
-
-.menu-item3 {
-    background-image: url("asset/estehC.png");
-}
-
-.menu-card {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 320px; /* same limit as the item */
-}
-
-/* caption under each menu item */
-.menu-caption {
-    margin-top: 10px;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #203766;
     color: #fff;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1vw;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-    padding: 0 6px;
-    word-break: break-word;
-    padding:15px;
-    border-radius: 10px;
-    
+    margin: 0;
+    padding: 0;
 }
 
-/* ensure the grid items remain flexible */
-.menu-card .menu-item1,
-.menu-card .menu-item2,
-.menu-card .menu-item3 {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-}
-
-/* small screens — keep caption readable and spacing comfortable */
-@media (max-width: 600px) {
-    .menu-caption { font-size: 15px; margin-top: 12px; }
-}
-
-.menu-section .menu-grid{
+header {
     display: flex;
-    gap: 45px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;       /* changed code: izinkan wrap agar turun ke bawah */
-    overflow-x: hidden;    /* changed code: hilangkan scroll samping */
-    padding: 12px;
+    padding: 10px 50px;
+    border-bottom: 1px solid #333;
 }
 
-/* kartu dropdown dengan dua warna: satu untuk summary (luar) dan satu untuk body (dalam saat terbuka) */
-.menu-card{
-    --summary-bg: #df2235;   /* warna di belakang teks (luar) */
-    --inner-bg: #f1ca2d;     /* warna di dalam dropdown (untuk gambar & teks) */
-    min-width: 220px;
-    max-width: 320px;
-    background: #ffffff;
-    border: 1px solid #e6e6e6;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    overflow: hidden;
-    flex: 1 1 280px;        /* changed code: membolehkan fleksibel & wrap */
-    display: grid;
-    background-position: center; 
-    grid-template-rows: auto 1fr;
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 700px) {
-    .menu-section .menu-grid{
-        flex-direction: column;
-        gap: 18px;
-        align-items: center;
-        padding: 12px 16px;
-    }
-    .menu-card{
-        width: 100%;
-        max-width: 520px; /* beri sedikit margin di kiri/kanan pada HP */
-        flex: 0 0 auto;
-    }
-    .menu-image{
-        max-width: 90%; /* tetap beri padding sisi agar tidak menempel pinggir */
-    }
-}
-
-/* summary: gunakan warna luar di belakang area teks, teks center */
-.menu-card summary{
-    list-style: none;
-    cursor: pointer;
-    padding: 14px 14px;
+.logo {
     font-weight: 700;
-    background: var(--summary-bg);
-    display: block;
-    position: relative;
-    text-align: center;
-    color: #ffffff;
-    margin: 0; /* remove default summary margin */
+    margin-right: 30px;
 }
 
-/* panah custom */
-.menu-card summary::-webkit-details-marker { display: none; }
-.menu-card summary::after{
-    content: "►";
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.2s ease;
-    color: #ffffff;
-}
-.menu-card[open] summary::after{
-    transform: translateY(-50%) rotate(90deg);
+.pass {
+    color: #007bff; /* Example color for 'PASS' text */
 }
 
-/* body inside details: default transparent, get inner color when open */
-.menu-body{
-    background: transparent;
-    transition: background 0.18s ease;
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+nav ul li:hover {
+    opacity: 1;
+}
+
+nav ul li.active {
+    opacity: 1;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.language {
+    margin-right: 20px;
+    opacity: 0.7;
+}
+
+.user-icons span {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+main {
+    padding: 30px 50px;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    background-color: #203766;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.tab-button.active {
+    opacity: 1;
+    border-bottom: 2px solid #007bff;
+}
+
+.filter {
+    margin-left: auto;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.reward-card {
+    background-color: #0c1d3b;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 12px;
-    align-items: center; /* changed code: center items (image + content) */
+    height: 250px;
+    cursor: pointer;
 }
 
-/* saat dropdown terbuka, body mendapat warna berbeda (dua warna terlihat) */
-.menu-card[open] .menu-body{
-    background: var(--inner-bg);
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 15px;
 }
 
-/* area gambar tetap cover; image background-image didefinisikan di .menu-itemX */
-.menu-image{
-    height: 180px;
-    width: 100%;            /* changed code: allow responsive width */
-    max-width: 260px;       /* changed code: constrain max width so image terlihat centered */
-    margin: 0 auto;         /* changed code: center horizontally */
-    background-color: transparent;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-}
-
-
-/* konten teks di dalam dropdown */
-.menu-content{
-    padding: 8px 6px;
-    color: #000000;
-    width: 100%;            /* changed code: match image width */
-    max-width: 260px;       /* changed code: align with image */
-    text-align: center;     /* changed code: center text under image */
+.card-image {
+    justify-content: center;
     align-items: center;
-}
-.menu-content h4{
-    margin: 0 0 6px 0;
-    font-size: 1.1rem;
-}
-.menu-content table{
-    margin: 0px auto;
-}
-.menu-content td{
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 7px ;
-}
-.menu-content p{
-    margin: 4px 0;
-    font-size: 0.95rem;
+    margin-bottom: 15px;
+    display:flex;
 }
 
-li {
-    list-style: none;
-    
+.card-image img {
+    width: 100%;
+    height: auto;
 }
 
-ul {
-    align-items: left;
-    text-align: left;
+.card-footer p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.order-icons a {
-    margin: 0 8px;
-    
+.coin-icon {
+    font-size: 1.2rem;
+    color: #ffb700; /* Example coin color */
+}
+
+.price {
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.star-icon {
+    color: #ffb700;
+    cursor: pointer;
 }
